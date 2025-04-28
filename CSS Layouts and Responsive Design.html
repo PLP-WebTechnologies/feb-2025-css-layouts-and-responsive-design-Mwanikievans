@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CSS Layouts and Responsive Design</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Note -->
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">This is my first CSS code designed to resize the browser window to see the responsive effect.</h4>
+</div>
+<!-- Header -->
+<div class="header">
+  <h1>Welcome to my CSS website page</h1>
+  <p>Designed with a <b>Flexbox</b> layout.</p>
+</div>
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#">HOME</a>
+  <a href="#">ABOUT</a>
+  <a href="#">CONTACT</a>
+  <a href="#">LIBRARY</a>
+</div>
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>About CSS</h2>
+    <h5>Photo of CSS codes:</h5>
+    <div class="fakeimg" style="height:200px;">CSS Codes</div>
+    <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. CSS Example.</p>
+    <h3>Our happy students</h3>
+    <p>100+ happy students from PLP</p>
+    <div class="fakeimg" style="height:60px;">John</div><br>
+    <div class="fakeimg" style="height:60px;">Jane</div><br>
+    <div class="fakeimg" style="height:60px;">Bob</div>
+  </div>
+  <div class="main">
+    <h2>Home</h2>
+    <h5>These are some of the photose placed with CSS codes</h5>
+    <div class="fakeimg" style="height:200px;">Domestic Animal photos from CSS</div>
+    <p>Why CSS?</p>
+    <p>The primary function of CSS is to define the styling and layout of web pages, making them more visually appealing, user-friendly, and accessible. CSS provides a way to define and apply styles consistently across all pages of a website, making it easier for developers to maintain and update their designs.</p>
+    <br>
+    <h2>LIBRARY</h2>
+    <h5>Library Photos</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>What about the Library?</p>
+    <p>These are the most current photos of code recorded during class sessions. they describe the back-end apearance of a web page</p>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+</body>
+</html>
